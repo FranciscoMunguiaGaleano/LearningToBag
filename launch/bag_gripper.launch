@@ -1,0 +1,3 @@
+<launch>
+    <node ns="grasping_bag" name="robotiq_controller" pkg="robotiq_3f_gripper_control" type="Robotiq3FGripperRtuNode.py" output="screen"/>
+</launch>

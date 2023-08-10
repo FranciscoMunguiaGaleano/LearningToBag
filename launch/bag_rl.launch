@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+ 
+<node pkg="bag_manipulation" type="perception_table_rl.py" name="perception_table_rl" output="screen"/>
+
+<node pkg="bag_manipulation" type="irohms_camera_calibrator.py" name="irohms_camera_calibrator" output="screen"/>
+ 
+<!-- Moveit -->
+    <include file="$(find iiwa_moveit)/launch/moveit_planning_execution.launch" />
+<!-- Gripper -->
+    <include file="$(find bag_manipulation)/launch/bag_gripper.launch" />
+
+</launch>

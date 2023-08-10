@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+<node pkg="bag_manipulation" type="init_robot.py" name="init_robot" output="screen"/>
+<node pkg="bag_manipulation" type="step_1_service.py" name="step_1_service" output="screen"/>
+<node pkg="bag_manipulation" type="step_2_service.py" name="step_2_service" output="screen"/>
+<node pkg="bag_manipulation" type="step_3_service.py" name="step_3_service" output="screen"/>
+<node pkg="bag_manipulation" type="step_4_service.py" name="step_4_service" output="screen"/>
+
+</launch>
