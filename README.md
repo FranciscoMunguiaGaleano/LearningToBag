@@ -2,12 +2,18 @@
 
 This package presents a learning-based framework meant to equip robots with the necessary skills to learn and execute bagging tasks on a simulation-free basis. Here, we utilize a reinforcement learning algorithm, which helps discover optimal grasping points on the bag. The package encapsulates the bagging task through a series of primitive actions and articulates the learning process across five distinct states. This package is intended for people interested in robotic manipulation of deformable objects and runs under a Robot Operating System (ROS) environment.
 
+
 <p align="center">
-  <img src="imgs/intro.png" alt="alt text" width="60%">
+    <img src="imgs/intro.png" alt="Framework description">
 </p>
+
+
 <p align="center">
-  <img src="imgs/implementation.jpg" alt="alt text" width="60%">
+  <a href="https://youtu.be/UV9HcEummx0">
+    <img src="imgs/implementation.jpg" alt="alt text" width="60%">
+  </a>
 </p>
+
 
 # Bag state representation
 
@@ -39,7 +45,7 @@ The following video shows the robot executing the primitive actions:
 
 # Training
 
-The proposed framework is designed for learning in the real world without the crutch of simulations, aiming to pinpoint the optimal grasping points for seamless transitions across distinct bag states. In a departure from conventional methods that often rely on simulated environments, this framework directly engages with the complexities of the physical world. By leveraging real-world interactions, the system dynamically adapts and refines its understanding of the optimal points for grasping. The framework's emphasis on simulation-free learning underscores its commitment to practical applicability, making it a promising avenue for advancing robotic capabilities in handling tasks, such as bagging, with real-world efficacy. The whole training process takes around 3 hours.
+The proposed framework is designed for learning in the real world without the crutch of simulations, aiming to pinpoint the optimal grasping points for seamless transitions across distinct bag states. In a departure from conventional methods that often rely on simulated environments, this framework directly engages with the complexities of the physical world. By leveraging real-world interactions, the system dynamically adapts and refines its understanding of the optimal points for grasping. The framework's emphasis on simulation-free learning underscores its commitment to practical applicability, making it a promising avenue for advancing robotic capabilities in handling tasks, such as bagging, with real-world efficacy. The whole training process takes around 3 hours. The following video shows the robot training:
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=stVUH-i-5V8">
@@ -49,10 +55,10 @@ The proposed framework is designed for learning in the real world without the cr
 
 # Generalization capabilities
 
-The model, after being trained, was tested with several bags of different sizes and materials. While it performed decently for cotton and small bags, it did not manage to handle plastic bags and large bags.
+The model, after being trained, was tested with several bags of different sizes and materials. While it performed decently for cotton and small bags, it did not manage to handle plastic bags and large bags. The following video shows the robot performing the task with several bags:
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=Po1be8pVaAA">
+  <a href="https://youtu.be/uKf_AiQcG3Q">
     <img src="imgs/exp_setup.jpg" alt="Experimental Setup" width="40%">
   </a>
 </p>
@@ -61,11 +67,11 @@ The model, after being trained, was tested with several bags of different sizes 
 
 So, let's talk about the problems we found in our framework. First off, unfolding the bag can be a bit tricky. If the bag is too big or the opening plays hide and seek, our framework struggles to handle it all smoothly.
 
-Then, there's the opening part. The robot sometimes gets stuck because the bag material doesn't like to change shape, especially with plastic bags. Or, to make things interesting, the robot might end up grabbing two layers instead of one. And besides that, the robot can also drag the whole bag instead of opening it (see video).
+Then, there's the opening part. The robot sometimes gets stuck because the bag material doesn't like to change shape, especially with plastic bags. Or, to make things interesting, the robot might end up grabbing two layers instead of one. And besides that, the robot can also drag the whole bag instead of opening it. The following video shows some of the most common failures while utilising our approahc:
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=IEAchN_TQT4">
-    <img src="https://img.youtube.com/vi/IEAchN_TQT4/0.jpg" alt="Opening Video Thumbnail">
+  <a href="https://youtu.be/8RU5C9uFk2k">
+    <img src="https://img.youtube.com/vi/8RU5C9uFk2k/0.jpg" alt="Opening Video Thumbnail">
   </a>
 </p>
 
